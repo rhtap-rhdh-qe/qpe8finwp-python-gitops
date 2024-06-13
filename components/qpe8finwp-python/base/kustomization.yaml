@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: qpe8finwp-python
+  janus-idp.io/tekton: qpe8finwp-python
+  backstage.io/kubernetes-id: qpe8finwp-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: qpe8finwp-python
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml
